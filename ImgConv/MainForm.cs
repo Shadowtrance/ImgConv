@@ -508,7 +508,7 @@ namespace ImgConv
         }
 
         /// <summary>
-        /// Convert to BIN - batch backgroundworker.
+        /// Convert to BIN - batch background worker.
         /// </summary>
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -552,7 +552,7 @@ namespace ImgConv
         }
 
         /// <summary>
-        /// Convert to BIN - batch backgroundworker completed.
+        /// Convert to BIN - batch background worker completed.
         /// </summary>
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
@@ -650,7 +650,7 @@ namespace ImgConv
 
         /// <summary>
         /// Check image dimensions and put it in the correct picturebox.
-        /// If the image doesn't match the dimenions for either the "combined" images picturebox
+        /// If the image doesn't match the dimensions for either the "combined" images picturebox
         /// or the "separate" images picturebox it will display in the small picturebox on the main form.
         /// If the image is too big for that picturebox it opens "Form4", "Big Images" and displays the image
         /// in that picturebox instead.
@@ -662,7 +662,7 @@ namespace ImgConv
             CurrentFile = listBox1.SelectedItem.ToString();
             img = Image.FromFile(fi.FullName);
 
-            int[] ds_size = { 400, 320, 480, 240 }; //0 - 3 width width height height
+            int[] ds_size = { 400, 320, 480, 240 }; //0 - 3 width/width/height/height
 
             if (fi.Extension != ".bin")
             {

@@ -40,7 +40,7 @@ namespace ImgConv
 
         /// <summary>
         /// grabs the resolution of the monitor when this form loads.
-        /// sets the size of the window of Pictureviewer.
+        /// sets the size of the window of Picture viewer.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
