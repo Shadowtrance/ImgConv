@@ -484,10 +484,6 @@ namespace ImgConv
         /// </summary>
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            string newName2 = Path.GetFileNameWithoutExtension(CurrentFile);
-            newName2 = newName2 + ".bin";
-            string path = curDir + "\\" + converted + "\\" + exts[6];
-
             Process proc;
             proc = new Process();
             proc.StartInfo.FileName = @"cmd";
