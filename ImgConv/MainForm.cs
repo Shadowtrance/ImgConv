@@ -222,34 +222,6 @@ namespace ImgConv
         }
 
         /// <summary>
-        /// Convert process command for out batch convert to BIN.
-        /// </summary>
-        private void ConvertBin()
-        {
-            string newName = Path.GetFileNameWithoutExtension(CurrentFile);
-            newName = newName + ".bgr";
-            string path = "\"" + curDir + "\\" + converted + "\\" + exts[6];
-            string filepath = Path.GetFullPath(CurrentFile);
-            Process proc;
-            proc = new Process();
-            proc.StartInfo.FileName = @"cmd";
-
-            proc.StartInfo.CreateNoWindow = true;
-            proc.StartInfo.UseShellExecute = false;
-            proc.StartInfo.RedirectStandardOutput = true;
-            proc.StartInfo.RedirectStandardInput = true;
-            proc.StartInfo.RedirectStandardError = true;
-            proc.StartInfo.Arguments = "/C" + " " + "\"" + "convert -rotate 90" + "\"" + " " + "\"" + filepath + "\"" + " " + path + "\\" + newName + "\"";
-
-            proc.Start();
-
-            Console.WriteLine(proc.StartInfo.Arguments);
-
-            proc.WaitForExit();
-            proc.Close();
-        }
-
-        /// <summary>
         /// Quick and dirty workaround borrowed (and changed slightly) from http://stackoverflow.com/a/11448060
         /// Save file as icon
         /// .ico
